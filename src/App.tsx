@@ -44,7 +44,12 @@ function App() {
                     )}
                 </For>
                 {emojiSelected() && (
-                    <EmojiPopup emoji={emojiSelected as Accessor<emojiType>} />
+                    <EmojiPopup
+                        emoji={emojiSelected as Accessor<emojiType>}
+                        close={() => {
+                            setEmojiSelected(null);
+                        }}
+                    />
                 )}
             </div>
         </>
