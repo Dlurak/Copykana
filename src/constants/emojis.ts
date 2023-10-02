@@ -25,6 +25,7 @@ export const tags = [
     'cheerful',
     'requesting',
     'strong',
+    'blush',
 ] as const;
 
 export type tag = (typeof tags)[number];
@@ -35,6 +36,7 @@ const unsaveEmojiList = {
     ':D': ['happy', 'laugh'],
     ':P': ['happy', 'laugh'],
     ':O': ['happy', 'laugh'],
+    'T-T': ['cry'],
     '(ﾉ◕ヮ◕)ﾉ': ['happy', 'laugh'],
     "(ง'̀-'́)ง,": ['angry', 'fighting'],
     "^( '-' )^": ['neutral'],
@@ -57,6 +59,10 @@ const unsaveEmojiList = {
     '⊂(◉‿◉)つ': ['happy', 'sharing'],
     '٩(◕‿◕｡)۶': ['happy', 'cheerful'],
     '༼ つ ◕_◕ ༽つ': ['neutral', 'requesting'],
+    '（╹◡╹）♡': ['happy', 'love', 'blush'],
+    '（╹◡╹）': ['happy'],
+    '（＾ｖ＾）': ['happy'],
+    'ヽ(`Д´)ﾉ': ['angry'],
 } satisfies Record<string, tag[]>;
 
 export type emojiType = keyof typeof unsaveEmojiList;
