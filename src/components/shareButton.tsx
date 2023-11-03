@@ -22,7 +22,7 @@ export const ShareButton = (props: ShareProps) => {
                     navigator.share({
                         text: props.text,
                     });
-                    
+
                     if (props.afterAction) props.afterAction();
                 }}
             >
