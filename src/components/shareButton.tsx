@@ -1,5 +1,6 @@
 interface ShareProps {
     text: string;
+    afterAction?: () => void;
 }
 
 const basicButtonStyle =
@@ -21,6 +22,8 @@ export const ShareButton = (props: ShareProps) => {
                     navigator.share({
                         text: props.text,
                     });
+                    
+                    if (props.afterAction) props.afterAction();
                 }}
             >
                 Share
@@ -42,6 +45,7 @@ export const CopyButton = (props: ShareProps) => {
             class={basicButtonStyle}
             onClick={() => {
                 navigator.clipboard.writeText(props.text);
+                if (props.afterAction) props.afterAction();
             }}
         >
             Copy

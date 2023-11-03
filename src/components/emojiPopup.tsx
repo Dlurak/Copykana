@@ -1,4 +1,4 @@
-import { Accessor, For } from 'solid-js';
+import { Accessor, For, createSignal } from 'solid-js';
 import { emojiType, tag, emojiList } from '../constants/emojis';
 import { CopyButton, ShareButton } from './shareButton';
 
@@ -12,6 +12,8 @@ const getTagsByEmoji = (emoji: emojiType): tag[] => {
 };
 
 export const EmojiPopup = (props: EmojiPopupProps) => {
+    const [communicationText, setCommunicationText] = createSignal<string | null>(null)
+
     return (
         <div class="fixed bottom-2 right-2 bg-slate-200 dark:bg-slate-800 p-4 rounded-md shadow-2xl max-w-full flex flex-col gap-3 items-stretch">
             <div class="flex justify-between items-center gap-2">
@@ -19,7 +21,7 @@ export const EmojiPopup = (props: EmojiPopupProps) => {
                 <button onClick={props.close}>X</button>
             </div>
             <div class="flex gap-2">
-                <CopyButton text={props.emoji()} />
+                <CopyButton text={props.emoji()} afterAction={() => setCommunicationText('Copied')} />
                 <ShareButton text={props.emoji()} />
             </div>
             <div class="flex gap-1 flex-wrap">
@@ -31,6 +33,7 @@ export const EmojiPopup = (props: EmojiPopupProps) => {
                     )}
                 </For>
             </div>
+            <p class="text-green-800 dark:text-green-500 empty:hidden">{communicationText()}</p>
         </div>
     );
 };
