@@ -1,65 +1,36 @@
-# Qwik City App ⚡️
+# Copykana
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+## Your Kana Emoji Repository
 
----
+Copykana is a simple and user-friendly website that allows you to easily copy and share kana emojis. With Copykana, you can explore a wide range of kana emojis, organized into various categories like happy, love, cry, angry, and many more.  
+Copykana is responsive, supports both dark and light mode, and works seamlessly offline.
 
-## Project Structure
+## Features
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+- **Copy Kana Emojis:** Quickly copy kana emojis to your clipboard with a single tap.
+- **Emoji Categories:** Easily browse emojis sorted into many categories for easy access.
+- **Category Filtering:** Looking for a emoji exactly for your mood? Use the category filter to find the perfect emoji. You can even filter by multiple categories at once.
+- **Offline Support:** Access Copykana even when you're offline, so you can copy kana emojis anytime, anywhere. You wont even notice the difference!
+- **Dark Mode:** Copykana supports both light and dark mode, so you can use it comfortably in any lighting condition.
+- **Gorgeous Collection:** Copykana has over 30 kana emojis, and the collection is growing! Feel free to submit your own kana emojis to be featured in Copykana.
 
-Inside your project, you'll see the following directory structure:
+## Getting Started
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+To get started with Copykana, simply visit the website at [copykana.vercel.app](https://copykana.vercel.app). You can also install Copykana as a PWA on your device for easy access.
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+## Usage
 
-- `src/components`: Recommended directory for components.
+1. Visit [copykana.vercel.app](https://copykana.vercel.app) on your device.
+2. Browse the kana emojis and find the one you want to copy.
+3. Tap on the kana emoji you want to use.
+4. Tap on the copy button to copy the kana emoji to your clipboard. Or tap on the share button to share the kana emoji directly with your friends.
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+## Feedback and Contributions
 
-## Add Integrations and deployment
+If you have any feedback or suggestions, feel free to open an issue or submit a pull request. You can also submit your own kana emojis to be featured in Copykana.
 
-Use the `pnpm qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
+## License
 
-```shell
-pnpm qwik add # or `pnpm qwik add`
-```
+Copykana is licensed under the [GPL-3.0 License](/LICENSE).
 
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `pnpm start`
-```
-
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
-
-## Preview
-
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-pnpm preview # or `pnpm preview`
-```
-
-## Production
-
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-pnpm build # or `pnpm build`
-```
+Enjoy using kana emojis with Copykana!
