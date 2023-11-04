@@ -52,7 +52,7 @@ const unsaveEmojiList = {
   "ᕕ( ᐛ )ᕗ": ["happy", "excited", "running"],
   "ʕ•ᴥ•ʔ": ["happy", "bear"],
   "ᘳ´• ˕ •`ᘰ": ["happy"],
-  "˚‧º·(˚ ˃̣̣̥᷄⌓˂̣̣̥᷅ )‧º·˚": ["neutral", "cry"],
+  "˚‧º·(˚ ˃̣̣̥᷄⌓˂̣̣̥᷅ )‧º·˚": ["cry"],
   "¯\\(°_o)/¯": ["neutral", "confused"],
   "(¬‿¬)": ["neutral", "skeptical"],
   "∩(︶▽︶)∩": ["happy", "chill"],
