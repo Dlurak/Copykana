@@ -42,3 +42,8 @@ lerna-debug.log*
 
 # Vercel
 .vercel
+
+# Playwright
+
+test-results
+playwright-report
