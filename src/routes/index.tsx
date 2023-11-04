@@ -1,7 +1,7 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import EmojiGrid from "~/components/emoji/emojiGrid";
-import EmojiPopup from "~/components/emoji/emojiPopup";
+import EmojiPopup from "~/components/emoji/popup/emojiPopup";
 import TagSelector from "~/components/tags/tagSelector";
 import { type tag, tags, type emojiType } from "~/constants/emoji";
 
@@ -24,7 +24,9 @@ export default component$(() => {
       <hr class="mb-4 mt-3 rounded-full" />
       <EmojiGrid tags={selectedTags.value} onClick={emojiClickFunc} />
 
-      {selectedEmoji.value && <EmojiPopup emoji={selectedEmoji.value} onClose={popupCloseFunc} />}
+      {selectedEmoji.value && (
+        <EmojiPopup emoji={selectedEmoji.value} onClose={popupCloseFunc} />
+      )}
     </>
   );
 });
