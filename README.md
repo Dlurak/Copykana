@@ -29,6 +29,15 @@ To get started with Copykana, simply visit the website at [copykana.vercel.app](
 
 If you have any feedback or suggestions, feel free to open an issue or submit a pull request. You can also submit your own kana emojis to be featured in Copykana.
 
+## API
+
+Not only does Copykana has a great UI, it also has a REST-API to access it's data. You can send `GET` requests to the following endpoints to get the data you need.
+
+| Endpoint                                            | Description                                                                                                          |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| [`/api`](https://copykana.vercel.app/api)           | Returns all kana emojis including their associated tags, using the query param tags you can filter for specific tags |
+| [`/api/tags`](https://copykana.vercel.app/api/tags) | Returns a list of all tags                                                                                           |
+
 ## License
 
 Copykana is licensed under the [GPL-3.0 License](/LICENSE).

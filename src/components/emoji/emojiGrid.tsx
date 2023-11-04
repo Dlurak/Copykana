@@ -1,6 +1,7 @@
 import { component$, type QRL } from "@builder.io/qwik";
-import { emojiList, type tag, type emojiType } from "~/constants/emoji";
+import { type tag, type emojiType } from "~/constants/emoji";
 import Emoji from "./emoji";
+import { filterEmoji } from "./filterEmoji";
 
 interface EmojiGridProps {
   tags: tag[];
@@ -8,11 +9,7 @@ interface EmojiGridProps {
 }
 
 export default component$((props: EmojiGridProps) => {
-  const allEmoji = Object.keys(emojiList) as emojiType[];
-
-  const filteredEmoji = allEmoji.filter((emoji) =>
-    props.tags.every((tag) => emojiList[emoji as emojiType].includes(tag)),
-  );
+  const filteredEmoji = filterEmoji(props.tags)
 
   return (
     <div class="flex flex-wrap gap-2">
