@@ -1,5 +1,5 @@
 import type { emojiType, tag } from "~/constants/emoji";
-import { emojiList } from "~/constants/emoji";
+import { emojiList } from "../../constants/emoji";
 
 const allEmoji = Object.keys(emojiList) as emojiType[];
 
