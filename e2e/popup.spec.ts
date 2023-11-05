@@ -37,6 +37,8 @@ test('the popup opens and closes', async ({ page, context }) => {
 
         if (clipboardIsAvailable) {
             await page.getByRole('button', { name: 'Copy' }).click();
+            await expect(page.getByText('Copied!')).toBeVisible();
+
             const clipboardContent = await page.evaluate(() => navigator.clipboard.readText());
             await expect(clipboardContent).toBe(`${emoji}`);
         }

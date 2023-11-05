@@ -9,7 +9,7 @@ interface EmojiGridProps {
 }
 
 export default component$((props: EmojiGridProps) => {
-  const filteredEmoji = filterEmoji(props.tags)
+  const filteredEmoji = filterEmoji(props.tags);
 
   return (
     <div class="flex flex-wrap gap-2">

@@ -24,7 +24,7 @@
     "start": "vite --open --mode ssr",
     "test.e2e": "playwright test",
     "test.unit": "vitest",
-    "test": "pnpm run test.unit && pnpm run test.e2e",
+    "test": "pnpm run test.unit --run && pnpm run test.e2e",
     "qwik": "qwik"
   },
   "devDependencies": {
