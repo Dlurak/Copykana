@@ -1,4 +1,4 @@
-import { component$, useSignal, type QRL, $ } from "@builder.io/qwik";
+import { component$, useSignal, type QRL, $, useTask$ } from "@builder.io/qwik";
 import { FaIcon } from "qwik-fontawesome";
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { emojiList, type emojiType } from "~/constants/emoji";
@@ -14,6 +14,11 @@ export default component$((props: EmojiPopupProps) => {
   const tags = emojiList[props.emoji];
 
   const communicationText = useSignal<null | string>(null);
+
+  useTask$(({ track }) => {
+    track(() => props.emoji);
+    communicationText.value = null;
+  });
 
   const onCopy = $(() => {
     communicationText.value = "Copied!";
