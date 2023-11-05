@@ -3,14 +3,14 @@
 ## Your Kana Emoji Repository
 
 Copykana is a simple and user-friendly website that allows you to easily copy and share kana emojis. With Copykana, you can explore a wide range of kana emojis, organized into various categories like happy, love, cry, angry, and many more.  
-Copykana is responsive, supports both dark and light mode, and works seamlessly offline.
+Copykana is responsive, supports both dark and light mode, and works seamlessly in slow network conditions.
 
 ## Features
 
 - **Copy Kana Emojis:** Quickly copy kana emojis to your clipboard with a single tap.
 - **Emoji Categories:** Easily browse emojis sorted into many categories for easy access.
 - **Category Filtering:** Looking for a emoji exactly for your mood? Use the category filter to find the perfect emoji. You can even filter by multiple categories at once.
-- **Offline Support:** Access Copykana even when you're offline, so you can copy kana emojis anytime, anywhere. You wont even notice the difference!
+- **Blazing Fast:** Copykana achieves blazing fast load times. In Lighthouse, Copykana scores a perfect 100 in performance!
 - **Dark Mode:** Copykana supports both light and dark mode, so you can use it comfortably in any lighting condition.
 - **Gorgeous Collection:** Copykana has over 30 kana emojis, and the collection is growing! Feel free to submit your own kana emojis to be featured in Copykana.
 
