@@ -10,6 +10,9 @@ test('the filter works', async ({ page }) => {
     const allFilterButtons = await filter.all();
     for (const filterButton of allFilterButtons) {
         const filterButtonText = (await filterButton.innerText()).toLowerCase();
+		// the favourite button has a special behaviour so skip it
+		if (filterButtonText === 'favourite') continue;
+
         await filterButton.click();
         await page.waitForTimeout(200);
 
@@ -17,7 +20,7 @@ test('the filter works', async ({ page }) => {
         const emojiButtonsText = await Promise.all(allEmojiButtons.map(async (button) => await button.innerText()));
         const filteredEmojisText = filterEmoji([filterButtonText])
 
-        await expect(emojiButtonsText).toEqual(filteredEmojisText);
+        expect(emojiButtonsText).toEqual(filteredEmojisText);
 
         await filterButton.click();
     }

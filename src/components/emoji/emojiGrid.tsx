@@ -1,4 +1,4 @@
-import { component$, useSignal, type QRL } from "@builder.io/qwik";
+import { component$, type QRL } from "@builder.io/qwik";
 import { type tag, type emojiType, emojiList } from "~/constants/emoji";
 import Emoji from "./emoji";
 import { filterEmoji } from "./filterEmoji";
