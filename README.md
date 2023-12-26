@@ -10,6 +10,7 @@ Copykana is responsive, supports both dark and light mode, and works seamlessly 
 - **Copy Kana Emojis:** Quickly copy kana emojis to your clipboard with a single tap.
 - **Emoji Categories:** Easily browse emojis sorted into many categories for easy access.
 - **Category Filtering:** Looking for a emoji exactly for your mood? Use the category filter to find the perfect emoji. You can even filter by multiple categories at once.
+- **Favourites:** You found your perfect favourite emoji? Perfect, with the new favourites features you can now save it to find it even faster!
 - **Blazing Fast:** Copykana achieves blazing fast load times. In Lighthouse, Copykana scores a perfect 100 in performance!
 - **Dark Mode:** Copykana supports both light and dark mode, so you can use it comfortably in any lighting condition.
 - **Gorgeous Collection:** Copykana has over 30 kana emojis, and the collection is growing! Feel free to submit your own kana emojis to be featured in Copykana.
