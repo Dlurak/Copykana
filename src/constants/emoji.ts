@@ -1,4 +1,5 @@
 export const tags = [
+  "favourite",
   "happy",
   "sad",
   "laugh",

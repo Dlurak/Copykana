@@ -8,8 +8,11 @@ import { type tag, tags, type emojiType } from "~/constants/emoji";
 export default component$(() => {
   const selectedTags = useSignal<tag[]>([]);
   const selectedEmoji = useSignal<null | emojiType>(null);
+  const favouriteFilterIsApplied = useSignal(false);
+
   const tagChangeFunc = $((tags: tag[]) => {
-    selectedTags.value = tags;
+    selectedTags.value = tags.filter((t) => t !== "favourite");
+    favouriteFilterIsApplied.value = tags.includes("favourite");
   });
   const emojiClickFunc = $((emoji: emojiType) => {
     selectedEmoji.value = emoji;
@@ -22,7 +25,11 @@ export default component$(() => {
     <>
       <TagSelector tags={tags} onChange={tagChangeFunc} />
       <hr class="mb-4 mt-3 rounded-full" />
-      <EmojiGrid tags={selectedTags.value} onClick={emojiClickFunc} />
+      <EmojiGrid
+        tags={selectedTags.value}
+        onClick={emojiClickFunc}
+        appyFavFilter={favouriteFilterIsApplied.value}
+      />
 
       {selectedEmoji.value && (
         <EmojiPopup emoji={selectedEmoji.value} onClose={popupCloseFunc} />
