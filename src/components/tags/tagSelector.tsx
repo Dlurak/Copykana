@@ -38,6 +38,7 @@ interface TagSelectorProps {
 
 export default component$((props: TagSelectorProps) => {
   const selectedTags = useSignal<tag[]>([]);
+  const isExpanded = useSignal(false);
 
   const onChangeFunc = $((t: tag) => {
     const isCurrentlySelected = selectedTags.value.includes(t);
@@ -53,12 +54,30 @@ export default component$((props: TagSelectorProps) => {
   });
 
   return (
-    <div class="flex w-full gap-2 overflow-x-scroll">
-      {props.tags.map((t) => (
-        <span key={t}>
-          <TagSelectorButton tag={t} onChange={onChangeFunc} />
-        </span>
-      ))}
+    <div class="flex w-full">
+      <div
+        class={[
+          "flex w-full gap-2 ",
+          {
+            "overflow-x-scroll": !isExpanded.value,
+			"flex-wrap": isExpanded.value
+          },
+        ]}
+      >
+        {props.tags.map((t) => (
+          <span key={t}>
+            <TagSelectorButton tag={t} onChange={onChangeFunc} />
+          </span>
+        ))}
+      </div>
+      <button
+        class="px-2"
+        onClick$={() => {
+          isExpanded.value = !isExpanded.value;
+        }}
+      >
+        Expand
+      </button>
     </div>
   );
 });
