@@ -1,5 +1,7 @@
 import { component$, useSignal, type QRL, $ } from "@builder.io/qwik";
 import type { tag } from "~/constants/emoji";
+import { FaIcon } from "qwik-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 interface TagSelectorButtonProps {
   tag: tag;
@@ -31,6 +33,18 @@ const TagSelectorButton = component$((props: TagSelectorButtonProps) => {
   );
 });
 
+interface ChevronProps {
+  isExpanded: boolean;
+}
+
+const Chevron = component$(({ isExpanded }: ChevronProps) => {
+  if (isExpanded) {
+    return <FaIcon icon={faChevronUp} />;
+  }
+
+  return <FaIcon icon={faChevronDown} />;
+});
+
 interface TagSelectorProps {
   tags: Readonly<tag[]>;
   onChange?: QRL<(selectedTags: tag[]) => void>;
@@ -60,7 +74,7 @@ export default component$((props: TagSelectorProps) => {
           "flex w-full gap-2 ",
           {
             "overflow-x-scroll": !isExpanded.value,
-			"flex-wrap": isExpanded.value
+            "flex-wrap": isExpanded.value,
           },
         ]}
       >
@@ -76,7 +90,7 @@ export default component$((props: TagSelectorProps) => {
           isExpanded.value = !isExpanded.value;
         }}
       >
-        Expand
+        <Chevron isExpanded={isExpanded.value} />
       </button>
     </div>
   );
